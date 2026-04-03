@@ -1,0 +1,123 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="cssdathang.css">
+    <title>Đặt Hàng</title>
+</head>
+<body>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+            <td height="300" background="tn.jpg" style="background-size:cover; background-position:center;">   
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="30%" align="center">
+                            <img src="logo.png" width="200">
+                        </td>
+                        <td width="70%" align="center">
+                            <h1 style="margin:0; color:#fff; text-shadow: 3px 3px 10px rgba(0,0,0,0.8); font-size: 80px; font-weight: 900;">ĐẶT MÓN ĂN</h1>  
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <nav class="menu">
+        <a href="index.html">TRANG CHỦ</a>
+		<a href="Form.html">GIỚI THIỆU</a>
+        <div class="dropdown">
+            <a>SẢN PHẨM</a>
+            <div class="dropdown-content">
+                <a href="thit.html">Thịt Trâu Gác Bếp</a>
+                <a href="comlam.html">Cơm Lam Nướng</a>
+                <a href="papinhtop.html">Pa Pỉnh Tộp</a>
+                <a href="thangco.html">Thắng Cố</a>
+                <a href="khaunhuc.html">Khâu Nhục</a>
+            </div>
+        </div>
+        <a href="danhgia.html">NHẬN XÉT</a>
+    </nav>
+
+    <div id="dathang">
+        <h2>ĐẶT HÀNG</h2>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLScyGqgCVeaAb8wJqF2cP-pv2pTgJurQK5_YXAx9bVOqmPcSZQ/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+            <label>Họ và tên:</label><br>
+            <input type="text" name="entry.1278571321" placeholder="Nhập họ tên"><br><br>
+
+            <label>Số điện thoại:</label><br>
+           <input type="text" name="entry.2121172484" placeholder="Nhập số điện thoại" oninput="this.value = this.value.replace(/[^0-9]/g,'')"><br><br>
+
+            <label>Địa chỉ:</label><br>
+            <input type="text" name="entry.1495586859" placeholder="Nhập địa chỉ"><br><br>
+
+            <label>Chọn món:</label>
+            <div class="mon-list">
+                <label class="mon-item">
+                    <input type="checkbox" name="entry.767414420" value="Thịt trâu gác bếp">
+                    <img src="bep.webp">
+                    <p>Thịt trâu gác bếp<br><b>350.000đ/kg</b></p>
+                    <input name="entry.767414420" type="number" min="0" value="1" style="width: 50px; margin-top: 5px; display: inline-block;">
+                </label>
+
+                <label class="mon-item">
+<input  type="checkbox" name="entry.2144905808" value="Cơm lam">
+                    <img src="nuong.jpg">
+                    <p>Cơm lam nướng<br><b>25.000đ/cái</b></p>
+                    <input name="entry.2144905808" type="number" min="0" value="1" style="width: 50px; margin-top: 5px; display: inline-block;">
+                </label>
+
+                <label class="mon-item">
+                    <input type="checkbox" name="entry.1755041482" value="Pa pỉnh tộp">
+                    <img src="papinhtop.jpg">
+                    <p>Pa pỉnh tộp<br><b>280.000đ/con</b></p>
+                    <input name="entry.1755041482" type="number" min="0" value="1" style="width: 50px; margin-top: 5px; display: inline-block;">
+                </label>
+
+                <label class="mon-item">
+                    <input type="checkbox" name="entry.1399369679" value="Thắng cố">
+                    <img src="co.jpg">
+                    <p>Thắng cố<br><b>60.000đ/bát</b></p>
+                    <input name="entry.1399369679" type="number" min="0" value="1" style="width: 50px; margin-top: 5px; display: inline-block;">
+                </label>
+
+                <label class="mon-item">
+                    <input type="checkbox"  name="entry.1136100176" value="Khâu nhục">
+                    <img src="nhuc.jpg">
+                    <p>Khâu nhục<br><b>60.000đ/bát</b></p>
+                    <input name="entry.1136100176" type="number" min="0" value="1" style="width: 50px; margin-top: 5px; display: inline-block;">
+                </label>
+            </div>
+            <label>Ghi chú(Nếu có):</label><br>
+            <textarea name="entry.45928234" rows="4" placeholder="Bắt đầu"></textarea><br><br>
+            <button type="submit">Gửi đơn đặt hàng</button>
+        </form>
+    </div>
+       <table width="100%" cellpadding="20" cellspacing="0" style="background:#F6E7B2; border-top:4px solid #8B5A2B;">
+        <tr>
+            <td width="50%" align="center">
+                <img src="logo.png" width="90"><br>
+                <b style="font-size:18px; color:#5A2D0C;">ẨM THỰC TÂY BẮC</b><br>
+                <i style="color:#6B3F1D;">Hương vị núi rừng Việt Nam</i>
+            </td>
+            <td width="50%" style="color:#5A2D0C;">
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><i>SĐT: 0388461378</i></li>
+                    <li><i>Địa chỉ: Xã Minh Thanh, Tuyên Quang</i></li>
+                    <li><i>Sản phẩm của Tổ 1 lớp 12BK10</i></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+    var submitted = false; 
+</script>
+<script type="text/javascript">
+    document.getElementById('hidden_iframe').onload = function() {
+        if (submitted) {
+            window.location = 'camon.html'; 
+        }
+    };
+</script>
+</body>
+</html>

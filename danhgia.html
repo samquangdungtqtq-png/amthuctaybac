@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhận xét - Ẩm thực Tây Bắc</title>
+    <link rel="stylesheet" href="cssdanhgia.css">
+</head>
+<body>
+
+  
+  <script src="social-plugin.js"></script>
+  
+    <header class="banner">
+        <img src="logo.png" class="banner-logo" alt="Logo">
+        <div class="banner-text">
+            <h1>ẨM THỰC TÂY BẮC</h1>
+            <p>Hương vị núi rừng – Đậm đà bản sắc</p>
+        </div>
+    </header>
+
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">TRANG CHỦ</a></li>
+		<li><a href="Form.html">GIỚI THIỆU</a></li>
+        <li class="dropdown">
+            <a>SẢN PHẨM</a>
+            <ul class="submenu">
+                <li><a href="thit.html">Thịt Trâu Gác Bếp</a></li>
+                <li><a href="comlam.html">Cơm Lam Nướng</a></li>
+                <li><a href="khaunhuc.html">Khâu Nhục</a></li>
+                <li><a href="thangco.html">Thắng Cố</a></li>
+                <li><a href="papinhtop.html">Pa Pỉnh Tộp</a></li>
+            </ul>
+        </li>
+        <li><a href="dathang.html">ĐẶT HÀNG</a></li>
+    </ul>
+</nav>
+
+    <div class="container">
+        
+        <div class="review-section">
+            <h2>Nhận xét của khách hàng</h2>
+            <div class="review-card">
+                <h4>Nguyễn Hoàng Anh Đức</h4>
+                <div class="star">★★★★★</div>
+                <p>Món ăn rất ngon, đặc biệt là thịt nướng Tây Bắc. Gia vị đậm đà và thơm.</p>
+            </div>
+            <div class="review-card">
+                <h4>Nguyễn Thu Hà</h4>
+                <div class="star">★★★★☆</div>
+                <p>Không gian đẹp, phục vụ nhanh. Đồ ăn khá hợp khẩu vị.</p>
+            </div>
+            <div class="review-card">
+                <h4>Đỗ Đức Trí</h4>
+                <div class="star">★★★★★</div>
+                <p>Lần đầu thử đồ ăn Tây Bắc nhưng cực kỳ thích. Sẽ quay lại.</p>
+            </div>
+			<div class="review-card">
+                <h4>Nguyễn Mạnh Duy</h4>
+                <div class="star">★★★★★</div>
+                <p>Đồ ăn ngonn, tôi cực kì thích, mọi người hãy ủng hộ nhé. Sẽ quay lại.</p>
+            </div>
+			<div class="review-card">
+                <h4>Tẩn Seo Liên</h4>
+                <div class="star">★★★★</div>
+                <p>Món ăn ổn, hợp với những ai thích vị đậm. Tuy nhiên mình thấy hơi mặn một chút.</p>
+            </div>
+			<div class="review-card">
+                <h4>Trịnh Trần Phương Tuấn</h4>
+                <div class="star">★★★★★</div>
+                <p>Món ăn Tây Bắc là một trong những đặc sản của Việt Nam, tôi ở Bến Tre và đã đi Tây Bắc cùng vợ để thưởng thức những món ăn ở đó. Quá là tuyệt vời Tây Bắc ơi! </p>
+            </div>
+        </div>
+
+       <div class="form-section">
+            <div class="form-box">
+				<form action="https://script.google.com/macros/s/AKfycbxMhvR7O4EPXlYSuWhvxyy-_eISxEEzg0acJwXTOIkN0KuwL4hgoRXPtVRj_GVCsrc/exec" method="POST" id="form">
+	<label>Họ và tên</label>
+<input type="type" name="Hoten_Khach" placeholder="Nhập họ và tên của bạn" required>
+
+    <label>Email</label>
+<input type="email" name="Email_Khach" placeholder="Ví dụ: abc@gmail.com" required>
+
+<label>Số điện thoại</label>
+<input type="number" name="Sdt_Khach" placeholder="Nhập số điện thoại của bạn" required>
+    <label>Mức độ hài lòng</label>
+    <select name="Muc_do_hai_long">
+        <option>★★★★★ Rất hài lòng</option>
+            <option>★★★★ Hài lòng</option>
+<option>★★★ Bình thường</option>
+            <option>★★ Không hài lòng</option>
+            <option>★ Rất không hài lòng</option>
+    </select>
+
+    <label>Nhận xét</label>
+    <textarea name="Noi_dung_nhan_xet" placeholder="Hãy chia sẻ cảm nhận..." required></textarea>
+
+    <button type="submit">Gửi đánh giá</button>
+
+</form>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(){
+    setTimeout(function(){
+        window.location.href="thankyou.html";
+    },1000);
+});
+</script>
+               
+	
+    <h2>Bạn cần hỗ trợ gì?</h2>
+	<form id="formHotro"
+action="https://script.google.com/macros/s/AKfycbw-XzJgbn6k5mgtbw-HFKfbzztRadjU8fePuJSSXjbk57cUGN4VRqoKW4ndF7C-doNO/exec"
+method="POST">
+
+ <label>Họ và tên</label>
+    <input type="text" name="Ten_Ho_Tro" placeholder="Nhập họ và tên" required>
+
+    <label>Email</label>
+<input type="email" name="Email_Ho_Tro" placeholder="Nhập email liên hệ" required>
+
+<label>Số điện thoại</label>
+<input type="number" name="Sdt_Khach" placeholder="Nhập số điện thoại của bạn" required>
+    <label>Nội dung cần hỗ trợ</label>
+    <textarea name="Noi_dung_Ho_Tro" placeholder="Nhập nội dung..." required></textarea>
+
+    <button type="submit">Gửi hỗ trợ</button>
+
+</form>
+
+<script>
+document.getElementById("formHotro").addEventListener("submit", function(){
+    setTimeout(function(){
+        window.location.href="thankyou.html";
+    },1000);
+});
+</script>
+            </div>
+        </div>
+	</div>	
+</div> </div> <footer class="footer-full-width">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo" style="width: 80px;"> <h3>ẨM THỰC TÂY BẮC</h3>
+                <p>Hương vị núi rừng Việt Nam</p>
+            </div>
+
+            <div class="footer-info">
+                <ul>
+                    <li><strong>Liên hệ SĐT:</strong> 0388461378</li>
+                    <li><strong>Địa chỉ:</strong> Xã Minh Thanh, tỉnh Tuyên Quang</li>
+                    <li><strong>Thông tin:</strong> Một sản phẩm của Tổ 1 lớp 12BK10</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top">↑</a>
+
+</body>
+</html>

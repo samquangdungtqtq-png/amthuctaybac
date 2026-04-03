@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  background: #fff8cc;
+  font-family: Arial;
+}
+
+.menu {
+  background-color: rgb(245, 185, 195);
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu a:hover {
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  width: 220px;
+  border: 1px solid #ccc;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:hover {
+  background: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tieude {
+  text-align: center;
+  color: darkred;
+}
+
+.gioithieu {
+  width: 80%;
+  margin: auto;
+}
+
+.noidung {
+  text-indent: 50px;
+  font-size: 20px;
+  line-height: 1.7;
+  padding: 25px;
+  width: 95%;
+  margin: 20px auto;
+  font-family: "Times New Roman", serif;
+}
+
+.bang {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.bang td {
+  padding: 15px;
+  border: none;
+}
+
+.cot-anh {
+  width: 25%;
+  height: 200px;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cot-anh img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.mon {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+.mon:hover {
+  background-color: #fffef0;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.mon img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+  transition: 0.4s;
+}
+
+.mon:hover img {
+  transform: scale(1.05);
+}
+
+.chu {
+  flex: 2;
+  padding: 0 20px;
+}
+
+.chu h3 a {
+  text-decoration: none;
+  color: #8B0000;
+  font-size: 24px;
+}
+
+.chu h3 a:hover {
+  text-decoration: underline;
+}
+
+.chu p {
+  font-size: 20px;
+  line-height: 1.7;
+  font-family: "Times New Roman", serif;
+  color: black;
+}
+
+.stt {
+  font-weight: bold;
+}

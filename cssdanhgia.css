@@ -1,0 +1,242 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e9e0b8; /* Màu vàng nhạt chủ đạo của trang */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Banner */
+.banner {
+    background: url('anhbanner.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa chữ theo chiều dọc */
+    align-items: center;     /* Căn giữa chữ theo chiều ngang */
+    text-align: center;
+    position: relative;      /* Làm gốc tọa độ cho logo */
+    padding: 0 20px;
+}
+
+/* Logo đẩy sang góc trái trên */
+.banner-logo {
+    position: absolute;      /* Tách biệt khỏi luồng văn bản */
+    top: 20px;               /* Cách mép trên 20px */
+    left: 20px;              /* Cách mép trái 20px */
+    width: 100px;            /* Điều chỉnh kích thước logo tùy chọn */
+    height: auto;
+    z-index: 10;
+}
+
+/* Phần chữ căn giữa */
+.banner-text {
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.banner-text h1 {
+    font-size: 3.5rem;       /* Tăng kích thước chữ cho nổi bật */
+    margin-bottom: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.banner-text p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+/* Navigation */
+nav {
+    background-color: #bc8686; /* Màu hồng nâu như trong ảnh */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li {
+    position: relative;
+    padding: 0 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: #fff;
+}
+
+/* Submenu cho Sản phẩm */
+.submenu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Container chia cột */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia 2 cột bằng nhau */
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* Tiêu đề các mục có thanh đỏ bên cạnh */
+h2 {
+    color: #800000;
+    margin-bottom: 20px;
+    border-left: 5px solid #800000;
+    padding-left: 15px;
+    font-size: 24px;
+}
+
+/* Phần Nhận xét (Bên trái) */
+.review-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.review-card h4 {
+    color: #333;
+    font-size: 18px;
+}
+
+.star {
+    color: #f1c40f;
+    margin: 5px 0;
+}
+
+/* Phần Form (Bên phải) */
+.form-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.form-box label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-box input, .form-box textarea, .form-box select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 15px;
+    background-color: #8b4513; /* Màu nâu đất đậm */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.form-box button:hover {
+    background-color: #5d2e0a;
+}
+
+/* Footer */
+.footer-full-width {
+    background-color: #e9e0b8; /* Cùng tông màu nền body hoặc đậm hơn xíu */
+    border-top: 2px solid #8b4513;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-info ul {
+    list-style: none;
+}
+
+.footer-info li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Nút quay lại đầu trang & Chat */
+.back-to-top, .chat-icon {
+    position: fixed;
+    right: 20px;
+    background: #8b4513;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.back-to-top { bottom: 20px; }
+.chat-icon { bottom: 80px; }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .banner-text h1 {
+        font-size: 2rem;
+    }
+}

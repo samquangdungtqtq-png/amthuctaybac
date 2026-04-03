@@ -1,0 +1,441 @@
+	<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ẩm Thực Tây Bắc</title>
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+	<style>
+
+	body{
+	margin:0;
+	font-family:Arial;
+	background:#FFF8DC;
+	}
+
+	.banner{
+	background:url("k.jpg") center/cover no-repeat;
+	height:320px;
+	position:relative;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	color:white;
+	}
+
+	.banner::after{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.35);
+	}
+
+	.logo{
+	position:absolute;
+	left:60px;
+	top:40px;
+	z-index:2;
+	}
+
+	.logo img{
+	width:170px;
+	}
+
+	.banner-text{
+	position:relative;
+	z-index:2;
+	}
+
+	.banner-text h1{
+	font-family:'Great Vibes';
+	font-size:50px;
+	margin:0;
+	letter-spacing:3px;
+	color:#FFD700;
+	text-shadow:3px 3px 10px black;
+	}
+
+	.banner-text p{
+	font-size:24px;
+	font-style:italic;
+	margin-top:10px;
+	text-shadow:2px 2px 8px black;
+	}
+
+	.menu{
+	background:#f4b6c2;
+	text-align:center;
+	padding:15px;
+	box-shadow:0 3px 10px rgba(0,0,0,0.2);
+	position:sticky;
+	top:0;
+	z-index:1000;
+	}
+
+	.menu a{
+	text-decoration:none;
+	color:black;
+	font-size:20px;
+	font-weight:bold;
+	margin:0 20px;
+	padding:8px 12px;
+	border-radius:6px;
+	transition:0.3s;
+	}
+
+	.menu a:hover{
+	background:#8B5A2B;
+	color:white;
+	transform:scale(1.1);
+	}
+
+	.dropdown{
+	display:inline-block;
+	position:relative;
+	}
+
+	.dropdown-content{
+	display:none;
+	position:absolute;
+	background:white;
+	min-width:220px;
+	border-radius:8px;
+	box-shadow:0 5px 15px rgba(0,0,0,0.2);
+	overflow:hidden;
+	}
+
+	.dropdown-content a{
+	display:block;
+	padding:12px;
+	margin:0;
+	font-size:18px;
+	}
+
+	.dropdown-content a:hover{
+	background:#FFD700;
+	}
+
+	.dropdown:hover .dropdown-content{
+	display:block;
+	}
+
+	.content{
+	padding:0;
+	text-align:center;
+	background:#FFF9C4;
+	}
+
+	.content h2{
+	color:#8B4513;
+	font-size:32px;
+	margin-bottom:20px;
+	}
+
+	.content h3{
+	color:#A0522D;
+	margin-top:30px;
+	font-size:24px;
+	}
+
+	.food-gallery{
+	display:grid;
+	grid-template-columns:repeat(5,1fr);
+	gap:25px;
+	margin-top:30px;
+	max-width:1200px;
+	margin:auto;
+	}
+
+	.food{
+	width:220px;
+	background:white;
+	border-radius:10px;
+	box-shadow:0 4px 12px rgba(0,0,0,0.2);
+	overflow:hidden;
+	transition:0.3s;
+	}
+
+	.food img{
+	width:100%;
+	height:150px;
+	object-fit:cover;
+	}
+
+	.food p{
+	padding:10px;
+	font-weight:bold;
+	color:#8B4513;
+	}
+
+	.food:hover{
+	transform:scale(1.08);
+	}
+
+	.member-table{
+	width:90%;
+	margin:auto;
+	border-spacing:30px;
+	table-layout:fixed;
+	}
+
+	.member-table td{
+	background:white;
+	border-radius:10px;
+	padding:20px;
+	box-shadow:0 3px 10px rgba(0,0,0,0.2);
+	font-size:17px;
+	transition:0.3s;
+	width:50%;
+	text-align:center;
+	}
+
+	.member-table td:hover{
+	transform:scale(1.05);
+	}
+
+	.review{
+	background:white;
+	padding:20px;
+	max-width:600px;
+	margin:20px auto;
+	border-left:6px solid #8B4513;
+	font-style:italic;
+	}
+
+	#topBtn{
+	position:fixed;
+	bottom:30px;
+	right:30px;
+	background:#8B4513;
+	color:white;
+	border:none;
+	padding:12px 16px;
+	font-size:18px;
+	border-radius:8px;
+	cursor:pointer;
+	}
+	.gallery{
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	gap:20px;
+	width:90%;
+	margin:auto;
+	margin-top:10px;
+	}
+
+	.member-img{
+	text-align:center;
+	}
+
+	.member-img img{
+	width:100%;
+	height:150px;
+	object-fit:cover;
+	border-radius:10px;
+	box-shadow:0 3px 10px rgba(0,0,0,0.2);
+	}
+
+	.member-img p{
+	margin-top:8px;
+	font-weight:bold;
+	color:#5A2D0C;
+	}
+	
+	.box{
+    background:white;
+    max-width:900px;
+    margin:5px auto;
+    padding: 3px 40px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    text-align:center;
+    }
+
+   .content p{
+    max-width:800px;
+    margin:0 auto 15px auto;
+    line-height:1.6;
+    font-size:18px;
+    color:#333;
+    text-align:center;
+    }
+
+   .box h2{
+    margin-bottom:10px;
+   }
+
+    .box h3{
+    margin-top:15px;
+    margin-bottom:10px;
+	}
+
+    .member-img{
+    transition:all 0.3s ease;
+    }
+
+    .member-img:hover{
+    transform:translateY(-8px) scale(1.05);
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    }
+
+	</style>
+	</head>
+	<body>
+
+	<div class="banner">
+	<div class="logo">
+	<img src="logo.png">
+	</div>
+	<div class="banner-text">
+	<h1>ẨM THỰC TÂY BẮC</h1>
+	<p>Hương vị núi rừng – Đậm đà bản sắc</p>
+	</div>
+	</div>
+
+	<div class="menu">
+	<a href="index.html">TRANG CHỦ</a>
+	<div class="dropdown">
+	<a>SẢN PHẨM</a>
+	<div class="dropdown-content">
+	<a href="thit.html">Thịt Trâu Gác Bếp</a>
+	<a href="comlam.html">Cơm Lam Nướng</a>
+	<a href="papinhtop.html">Pa Pỉnh Tộp</a>
+	<a href="thangco.html">Thắng Cố</a>
+	<a href="khaunhuc.html">Khâu Nhục</a>
+	</div>
+	</div>
+	<a href="dathang.html">ĐẶT HÀNG</a>
+	<a href="danhgia.html">NHẬN XÉT</a>
+	</div>
+
+	<div class="content">
+	<div class="box">
+	<h2>GIỚI THIỆU ẨM THỰC TÂY BẮC</h2>
+	<p>
+	Tây Bắc là vùng đất nổi tiếng với những dãy núi hùng vĩ, thiên nhiên hoang sơ và nền văn hóa đặc sắc của nhiều dân tộc như Thái, Mông, Dao, Tày.
+	Không chỉ nổi bật bởi cảnh đẹp, nơi đây còn có nền ẩm thực phong phú mang đậm hương vị núi rừng. Các món ăn thường sử dụng nguyên liệu tự nhiên như
+	thịt trâu, cá suối, gạo nếp và các loại gia vị đặc trưng như mắc khén, hạt dổi.
+	</p>
+	<h3>Đặc điểm của ẩm thực Tây Bắc</h3>
+	<p>
+	Ẩm thực Tây Bắc mang nhiều nét đặc trưng riêng. Nguyên liệu thường được lấy trực tiếp từ thiên nhiên như rau rừng, cá suối hay thịt gia súc được nuôi thả tự nhiên.
+	Nhiều món ăn được chế biến bằng cách nướng trên than củi hoặc hun khói trên bếp, tạo nên hương vị rất riêng của vùng núi.
+	</p>
+	<h3>Ý nghĩa văn hóa của ẩm thực</h3>
+	<p>
+	Đối với người dân Tây Bắc, ẩm thực không chỉ là nhu cầu ăn uống mà còn gắn liền với đời sống văn hóa và các lễ hội truyền thống.
+	Những món ăn đặc sản thường được chuẩn bị trong các dịp lễ hội hay khi tiếp đón khách để thể hiện sự hiếu khách của người dân nơi đây.
+	</p>
+	<h3>Mục đích xây dựng website</h3>
+	<p>
+	Website "Ẩm thực Tây Bắc" được xây dựng nhằm giới thiệu và quảng bá những nét đặc sắc của ẩm thực vùng Tây Bắc đến với mọi người,
+	giúp người xem hiểu thêm về văn hóa và các món ăn đặc trưng của vùng đất này.
+	</p>
+	</div>
+	<h3 style="font-size:32px;">CÁC MÓN ĂN ĐẶC SẢN</h3>
+	<div class="food-gallery">
+	<div class="food">
+	<img src="bep.webp">
+	<p>Thịt Trâu Gác Bếp</p>
+	</div>
+	<div class="food">
+	<img src="nuong.jpg">
+	<p>Cơm Lam Nướng</p>
+	</div>
+	<div class="food">
+	<img src="top.webp">
+	<p>Pa Pỉnh Tộp</p>
+	</div>
+	<div class="food">
+	<img src="co.jpg">
+	<p>Thắng Cố</p>
+	</div>
+	<div class="food">
+	<img src="nhuc.jpg">
+	<p>Khâu Nhục</p>
+	</div>
+	</div>
+
+
+	<h2>THÀNH VIÊN THỰC HIỆN</h2>
+	<table class="member-table">
+	<tr>
+	<td><b>Vi Thị Quỳnh Như</b><br><br>Trưởng Nhóm - Phân Công Nhiệm Vụ Và Nội Dung Món Ăn "Thịt Trâu Gác Bếp"</td>
+	<td><b>Nguyễn Mạnh Duy</b><br><br>Giới Thiệu Trang Website</td>
+	</tr>
+	<tr>
+	<td><b>Nguyễn Thành Tân</b><br><br>Đặt Món Ăn </td>
+	<td><b>Lý Quốc Cường</b><br><br>Liên Hệ Và Phản Hồi Của Khách Hàng</td>
+	</tr>
+	<tr>
+	<td><b>Sầm Thị Trà My</b><br><br>Nội Dung Món Ăn "Cơm Lam Nướng"</td>
+	<td><b>Trần Anh Tú</b><br><br>Nội Dung Món Ăn "Pa Pỉnh Tộp"</td>
+	</tr>
+	<tr>
+	<td><b>Nguyễn Thị Quỳnh</b><br><br>Nội Dung Món Ăn "Thắng Cố"</td>
+	<td><b>Nguyễn Thị Hoa</b><br><br>Nội Dung Món Ăn "Khâu Nhục"</td>
+	</tr>
+	</table>
+	</div>
+
+	<div class="gallery">
+	<div class="member-img">
+	<img src="nhu.jpg">
+	<p>Vi Thị Quỳnh Như</p>
+	</div>
+	<div class="member-img">
+	<img src="duy.jpg">
+	<p>Nguyễn Mạnh Duy</p>
+	</div>
+	<div class="member-img">
+	<img src="tan.jpg">
+	<p>Nguyễn Thành Tân</p>
+	</div>
+	<div class="member-img">
+	<img src="cuong.jpg">
+	<p>Lý Quốc Cường</p>
+	</div>
+	<div class="member-img">
+	<img src="my.jpg">
+	<p>Sầm Thị Trà My</p>
+	</div>
+	<div class="member-img">
+	<img src="tu.jpg">
+	<p>Trần Anh Tú</p>
+	</div>
+	<div class="member-img">
+	<img src="quynh.jpg">
+	<p>Nguyễn Thị Quỳnh</p>
+	</div>
+	<div class="member-img">
+	<img src="hoa.jpg">
+	<p>Nguyễn Thị Hoa</p>
+	</div>
+	</div>
+	
+	<script src="social-plugin.js"></script>
+
+	<table width="100%" cellpadding="20" cellspacing="0"
+	style="background:#F6E7B2;border-top:4px solid #8B5A2B;">
+	<tr>
+	<td width="50%" align="center">
+	<img src="logo.png" width="90"><br>
+	<b style="font-size:18px;color:#5A2D0C;">ẨM THỰC TÂY BẮC</b><br>
+	<i style="color:#6B3F1D;">Hương vị núi rừng Việt Nam</i>
+	</td>
+	<td width="50%" style="color:#5A2D0C;font-size:20px;">
+	<ul>
+	<li><i>Liên hệ SĐT: 0388461378</i></li>
+	<li><i>Địa chỉ: Xã Minh Thanh, tỉnh Tuyên Quang</i></li>
+	<li><i>Thông tin: Một sản phẩm của Tổ 1 lớp 12BK10</i></li>
+	</ul>
+	</td>
+	</tr>
+	</table>
+	<button id="topBtn" onclick="window.scrollTo(0,0)">↑</button>
+
+	</body>
+	</html>

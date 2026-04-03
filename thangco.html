@@ -1,0 +1,421 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>THẮNG CỐ – ẨM THỰC TÂY BẮC</title>
+<style>
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    margin: 0;
+    background-color: white;
+    font-family: sans-serif;
+    line-height:1.8;
+}
+
+.banner{
+    width:100%;
+    height:350px;
+    background:url("ảnh tc1.png") no-repeat center;
+    background-size:cover;
+    position:relative;
+}
+
+.banner img{
+    width:180px;
+    position:absolute;
+    top:50%;
+    left:40px;
+    transform:translateY(-50%);
+}
+
+.menu {
+    background-color: rgb(245, 185, 195);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  width: 220px;
+  border: 1px solid #ccc;
+}
+
+.dropdown-content a {
+  display: block;     
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:hover {
+  background: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.content{
+    width:1000px;
+    margin:auto;
+    padding:25px 0;
+}
+
+h1{
+    text-align:center;
+    color:darkblue;
+    margin-bottom:25px;
+}
+
+.row{
+    width:100%;
+    overflow:hidden;
+    margin-bottom:30px;
+    border-radius:15px;
+    padding:15px;
+}
+
+.row1{ background:#FFE4E1; }
+.row2{ background:#E0FFFF; }
+.row3{ background:#FFFACD; }
+.row4{ background:#E6E6FA; }
+.row5{ background:#E0FFE0; }
+.row6 { 
+    background: #E6E6FA; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 40px;
+	padding: 30px 20px;
+}
+
+.section-title-full {
+    width: 100%;
+    text-align: center;
+    color: brown;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.location-card {
+    background: white;
+    width: 300px;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.location-card:hover {
+    transform: translateY(-10px);
+}
+
+.location-card img.icon-round {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f5b9c3;
+    margin-bottom: 15px;
+}
+
+.location-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.location-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    text-indent: 0 !important; /* Bỏ thụt đầu dòng cho card */
+    text-align: center !important;
+}
+
+.btn-map {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #8B4513;
+    color: white !important;
+text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-map:hover {
+    background: #A52A2A;
+}
+
+.row6::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.col-img{
+    width:35%;
+    float:left;
+}
+
+.col-img img{
+    width:100%;
+    height:220px;
+    border-radius:12px;
+}
+
+.col-text{
+    width:60%;
+    float:right;
+}
+
+.col-text h2{
+    color:brown;
+    margin-bottom:10px;
+}
+
+.col-text p{
+    text-align:justify;
+    text-indent:30px;
+}
+
+.col-text ul{
+    margin-left:25px;
+}
+
+.doan-van{
+    text-align:center;
+    font-style:italic;
+    margin-top:40px;
+}
+
+.gallery{
+    width:1000px;
+    margin:auto;
+    margin-top:30px;
+    text-align:center;
+	color:#B22222;
+}
+
+.gallery img{
+    width:300px;
+    height:200px;
+    margin:10px;
+    border-radius:10px;
+}
+
+.gallery-row{
+    overflow:hidden;
+}
+
+
+.footer {
+    width: 100%;
+    background: #F6E7B2;
+    border-top: 3px solid #8B5A2B;
+
+    padding: 10px 0;    
+    margin-top: 15px;    
+}
+
+.footer table {
+    width: 900px;        
+    margin: auto;        
+}
+
+.footer img {
+    width: 100px;         
+}
+
+.footer td {
+    font-size: 18px;    
+}
+</style>
+</head>
+
+<body>
+
+<div class="banner">
+    <img src="logo.png">
+</div>
+
+<nav class="menu">
+    <a href="index.html">TRANG CHỦ</a>
+	<a href="form.html">GIỚI THIỆU</a>
+    <div class="dropdown">
+        <a>SẢN PHẨM</a>
+        <div class="dropdown-content">
+            <a href="thit.html">Thịt trâu gác bếp</a>
+            <a href="comlam.html">Cơm lam nướng</a>
+            <a href="papinhtop.html">Pa pỉnh tộp</a>
+            <a href="thangco.html">Thắng cố</a>
+            <a href="khaunhuc.html">Khâu nhục</a>
+        </div>
+    </div>
+    <a href="dathang.html">ĐẶT HÀNG</a>
+    <a href="danhgia.html">NHẬN XÉT</a>
+</nav>
+
+<div class="content">
+<h1>THẮNG CỐ – TINH HOA NÚI RỪNG TÂY BẮC</h1>
+<div class="row row1">
+    <div class="col-img">
+        <img src="tc1.jpg">
+    </div>
+    <div class="col-text">
+        <h2>1. Tên món ăn</h2>
+        <p>Thắng cố bắt nguồn từ tiếng H’Mông, có nghĩa là “nồi canh thịt”.
+		Đây là món ăn truyền thống nổi tiếng của đồng bào dân tộc vùng núi phía Bắc Việt Nam.
+        </p>
+    </div>
+</div>
+
+<div class="row row2">
+    <div class="col-img">
+        <img src="tc4.jpg">
+    </div>
+    <div class="col-text">
+        <h2>2. Nguồn gốc</h2>
+        <p>Thắng cố có nguồn gốc từ Vân Nam (Trung Quốc), sau đó được người Mông du nhập 
+		và phát triển tại các tỉnh Tây Bắc như Hà Giang, Lào Cai, Yên Bái, Sơn La.
+        </p>
+    </div>
+</div>
+<div class="row row3">
+    <div class="col-img">
+        <img src="tc7.jpg">
+    </div>
+    <div class="col-text">
+        <h2>3. Nguyên liệu</h2>
+<ul>
+            <li>Thịt ngựa (hoặc bò, trâu)</li>
+            <li>Nội tạng động vật</li>
+            <li>Gia vị: thảo quả, quế, gừng, sả, ớt</li>
+            <li>Muối và nước</li>
+        </ul>
+    </div>
+
+</div>
+<div class="row row4">
+    <div class="col-img">
+        <img src="tc5.jpg">
+    </div>
+    <div class="col-text">
+        <h2>4. Cách chế biến</h2>
+        <ul>
+<li>Bước 1: Sơ chế nội tạng và thịt ngựa, khử mùi bằng chanh, gừng hoặc muối, thái miếng vừa ăn.</li>
+<li>Bước 2: Ướp thịt với hoa hồi, quế, gừng nướng, mắc khén, hạt dổi và gia vị.</li>
+<li>Bước 3: Xào săn thịt, đổ nước đun sôi rồi cho sả, thảo quả, gừng vào.</li>
+<li>Bước 4: Ninh nhỏ lửa 1–2 tiếng, vớt bọt để nước trong.</li>
+<li>Bước 5: Pha nước chấm tùy khẩu vị và thưởng thức.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row row5">
+    <div class="col-img">
+        <img src="tc1.jpg">
+    </div>
+    <div class="col-text">
+        <h2>5. Giá thành</h2>
+        <p>
+        Giá một bát thắng cố dao động từ 50.000 – 100.000 đồng tùy địa điểm và nguyên liệu sử dụng.
+        </p>
+    </div>
+</div>
+
+<div class="row row6">
+    <div class="section-title-full">6. ĐIỂM ĐẾN TRẢI NGHIỆM THẮNG CỐ</div>
+    
+    <div class="location-card">
+        <img src="tc8.jpg" class="icon-round"> <h3>Chuẩn Vị Nhất</h3>
+        <p><b>Chợ phiên Bắc Hà (Lào Cai)</b><br>Họp duy nhất vào Chủ Nhật hàng tuần. Nơi giữ nguyên bản hương vị truyền thống.</p>
+        <a href="#" class="btn-map">Xem Bản Đồ</a>
+    </div>
+
+    <div class="location-card">
+        <img src="tc9.jpg" class="icon-round"> <h3>Văn Hóa Đặc Sắc</h3>
+        <p><b>Chợ phiên Đồng Văn (Hà Giang)</b><br>Thưởng thức thắng cố trong không gian đá xám cổ kính của vùng cao cực Bắc.</p>
+        <a href="#" class="btn-map">Xem Bản Đồ</a>
+    </div>
+</div>
+
+
+<div class="doan-van">
+"Ẩm thực Tây Bắc như bản hòa ca của núi rừng, nơi hương vị món ăn quyện hòa cùng bản sắc con người vùng cao."
+</div>
+</div>
+ 
+ <div class="gallery">
+
+    <h2>7. Thư viện ảnh</h2>
+
+    <div class="gallery-row">
+        <img src="thangco1.jpg">
+        <img src="thangco2.jpeg">
+        <img src="thangco3.jpg">
+    </div>
+
+    <div class="gallery-row">
+        <img src="thangco4.jpg">
+        <img src="thangco5.jpg">
+        <img src="thangco6.jpg">
+    </div>
+</div>
+
+<div class="footer">
+<table cellpadding="20">
+<tr>
+
+<td width="30%" align="center">
+<img src="logo.png" width="60"><br>
+<b>ẨM THỰC TÂY BẮC</b><br>
+<i>Hương vị núi rừng Việt Nam</i>
+</td>
+
+<td>
+<ul>
+<li>📞 Liên hệ: 0388461378</li>
+<li>📍 Địa chỉ: Xã Minh Thanh, tỉnh Tuyên Quang</li>
+<li>📘 Sản phẩm của Tổ 1 – lớp 12BK10</li>
+</ul>
+</td>
+
+</tr>
+</table>
+</div>
+
+</body>
+</html>
